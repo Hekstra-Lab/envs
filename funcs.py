@@ -1,6 +1,7 @@
 from __future__ import annotations
 import yaml
 
+
 def extend_env(base, env):
     base_conda = base.get("conda", [])
     base_pip = base.get("pip", [])
@@ -38,7 +39,7 @@ def dump_env(env_dir, name, env, vim=True):
         yaml.dump(env, f, Dumper=Dumper)
 
     if vim:
-        dependencies = list(conda) + ['jupyterlab-vim']
+        dependencies = list(conda) + ["jupyterlab-vim"]
         pip.append("jupyterlab-vimrc")
         dependencies.append({"pip": pip})
 
