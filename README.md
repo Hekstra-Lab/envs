@@ -1,3 +1,3 @@
-# Ian's conda environments
+# Hekstra lab conda environments
 
-Kept here for consistency across computers. For usage see ianhi.github.io/envs
+Kept here for consistency across computers. For usage see hekstra-lab.github.io/envs

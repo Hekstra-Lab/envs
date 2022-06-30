@@ -10,7 +10,6 @@ base_dir = Path(__file__).parent
 env_dir = base_dir / "envs"
 env_dir.mkdir(parents=True, exist_ok=True)
 with open(base_dir / "definitions.yaml") as f:
-
     data = yaml.load(f, Loader=yaml.FullLoader)
 
 for name, env_info in data.items():
@@ -25,4 +24,5 @@ for name, env_info in data.items():
 
 
 for name, env in envs.items():
-    dump_env(env_dir, name, env)
+    dump_env(env_dir, name, env, vim=True)
+    dump_env(env_dir, name, env, vim=False)

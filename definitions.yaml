@@ -15,10 +15,8 @@ jupyter:
     - base
   - conda:
     - jupyterlab
-    - jupyterlab_vim
     - ipympl
   - pip:
-    - jupyterlab-vimrc
     - jupyterlab_code_formatter
     - theme-darcula
 

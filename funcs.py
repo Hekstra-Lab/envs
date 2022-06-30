@@ -17,37 +17,31 @@ class Dumper(yaml.Dumper):
         return super().increase_indent(flow=flow, indentless=False)
 
 
-def remove_vim(deps: list[str | dict]) -> list[str | dict]:
-    out = []
-    for d in deps:
-        if isinstance(d, dict):
-            dict_ = {}
-            for k, v in d.items():
-                dict_[k] = remove_vim(v)
-            out.append(dict_)
-        elif "vim" not in d:
-            out.append(d)
-    return out
-
-
-def dump_env(env_dir, name, env, no_vim=True):
+def dump_env(env_dir, name, env, vim=True):
     """take my garbo dict of env and put in the conda forge format
 
     Parameters
     ----------
     name : str
     env : dict
-    no_vim : boolean
-        If True also generate a no_vim version without jupyterlab vim plugins
+    vim : boolean
+        If True also generate a vim version with jupyterlab vim plugins
     """
-    dependencies = env.get("conda", [])
-    pip = env.get("pip", [])
+    conda = list(env.get("conda", []))
+    pip = list(env.get("pip", []))
+
+    dependencies = list(conda)
     dependencies.append({"pip": pip})
+
     env = {"name": name, "channels": ["conda-forge"], "dependencies": dependencies}
     with open(env_dir / (name + ".yaml"), "w") as f:
         yaml.dump(env, f, Dumper=Dumper)
-    if no_vim:
-        vim_free = remove_vim(dependencies)
-        env["dependencies"] = vim_free
-        with open(env_dir / (name + "-no-vim.yaml"), "w") as f:
+
+    if vim:
+        dependencies = list(conda) + ['jupyterlab-vim']
+        pip.append("jupyterlab-vimrc")
+        dependencies.append({"pip": pip})
+
+        env = {"name": name, "channels": ["conda-forge"], "dependencies": dependencies}
+        with open(env_dir / (name + "-vim.yaml"), "w") as f:
             yaml.dump(env, f, Dumper=Dumper)

@@ -6,8 +6,8 @@ Online collection of my conda environments. Kept here for consistency across com
 
 **Without vim**
 
-By default the enviroments will have `jupyterlab-vim` and `jupyterlab-vimrc` installed. To not install these add `no-vim`
-to the file name the just before the yaml. e.g. `jupyter.yaml -> jupyter-no-vim.yaml`
+By default the enviroments will not have `jupyterlab-vim` and `jupyterlab-vimrc` installed. To install these add `vim`
+to the file name the just before the yaml. e.g. `jupyter.yaml -> jupyter-vim.yaml`
 
 
 **Choose your own environment name**
