@@ -11,19 +11,19 @@ dependencies:
   - numpy
   - pip
   - python
+  - scikit-image
+  - scikit-learn
   - scipy
   - xarray
+  - jupyterlab-vim
   - pip:
       - aicsimageio
       - black
-      - git+https://github.com/ianhi/pymmcore-MDA-engines
       - isort
       - jupyterlab_code_formatter
-      - napari-micromanager
       - napari[all]
-      - pymmcore-MDA-writers
-      - pymmcore-plus
       - theme-darcula
       - tifffile
       - zarr
-name: micro-control
+      - jupyterlab-vimrc
+name: micro-analysis

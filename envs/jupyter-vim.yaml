@@ -1,25 +1,19 @@
 channels:
   - conda-forge
 dependencies:
-  - bottleneck
-  - dask
   - ipympl
   - jupyterlab
   - matplotlib
   - mpl-interactions
-  - netCDF4
   - numpy
   - pip
   - python
   - scipy
-  - xarray
+  - jupyterlab-vim
   - pip:
-      - aicsimageio
       - black
       - isort
       - jupyterlab_code_formatter
-      - napari[all]
       - theme-darcula
-      - tifffile
-      - zarr
-name: micro-base
+      - jupyterlab-vimrc
+name: jupyter

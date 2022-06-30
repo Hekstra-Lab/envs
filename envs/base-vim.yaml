@@ -7,7 +7,9 @@ dependencies:
   - matplotlib
   - pip
   - mpl-interactions
+  - jupyterlab-vim
   - pip:
       - black
       - isort
+      - jupyterlab-vimrc
 name: base

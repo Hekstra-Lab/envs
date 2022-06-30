@@ -5,7 +5,6 @@ dependencies:
   - dask
   - ipympl
   - jupyterlab
-  - jupyterlab_vim
   - matplotlib
   - mpl-interactions
   - netCDF4
@@ -19,7 +18,6 @@ dependencies:
       - black
       - git+https://github.com/ianhi/pymmcore-MDA-engines
       - isort
-      - jupyterlab-vimrc
       - jupyterlab_code_formatter
       - napari-micromanager
       - napari[all]

@@ -5,7 +5,6 @@ dependencies:
   - dask
   - ipympl
   - jupyterlab
-  - jupyterlab_vim
   - matplotlib
   - mpl-interactions
   - netCDF4
@@ -18,7 +17,6 @@ dependencies:
       - aicsimageio
       - black
       - isort
-      - jupyterlab-vimrc
       - jupyterlab_code_formatter
       - napari[all]
       - theme-darcula

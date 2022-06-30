@@ -11,7 +11,9 @@ dependencies:
   - python
   - scipy
   - xarray
+  - jupyterlab-vim
   - pip:
       - black
       - isort
+      - jupyterlab-vimrc
 name: xarray
