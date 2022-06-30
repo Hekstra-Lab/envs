@@ -18,14 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Ian's conda envs
+title: Hekstra Lab conda envs
 email: ianhuntisaak@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Collection of conda environment definitions
 baseurl: "/envs" # the subpath of your site, e.g. /blog
-url: "ianhi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ianhi7919
-github_username:  ianhi
+url: "hekstra-lab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 remote_theme: pages-themes/cayman@v0.2.0
