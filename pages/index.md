@@ -24,7 +24,7 @@ Good setup for generic analysis. Contains numpy matplotlib etc and jupyterlab wi
 and vim extensions.
 
 ```bash
-mamba env create --force --file https://ianhi.github.io/envs/envs/jupyter.yaml
+mamba env create --force --file https://hekstra-lab.github.io/envs/envs/jupyter.yaml
 ```
 
 
@@ -36,7 +36,7 @@ Everything here is based on `jupyter` and also contains `xarray`
 base env + napari + xarray + image loading
 
 ```bash
-mamba env create --force --file https://ianhi.github.io/envs/envs/micro-base.yaml
+mamba env create --force --file https://hekstra-lab.github.io/envs/envs/micro-base.yaml
 ```
 
 **micro-analysis**
@@ -44,7 +44,7 @@ mamba env create --force --file https://ianhi.github.io/envs/envs/micro-base.yam
 `micro-base` + scikit image and learn
 
 ```bash
-mamba env create --force --file https://ianhi.github.io/envs/envs/micro-analysis.yaml
+mamba env create --force --file https://hekstra-lab.github.io/envs/envs/micro-analysis.yaml
 ```
 
 **micro-control**
@@ -52,6 +52,6 @@ mamba env create --force --file https://ianhi.github.io/envs/envs/micro-analysis
 `micro-base` plus Controlling microscopes with pymmcore-plus and napari-micromanager
 
 ```bash
-mamba env create --force --file https://ianhi.github.io.envs/envs/micro-control.yaml
+mamba env create --force --file https://hekstra-lab.github.io/envs/envs/micro-control.yaml
 ```
 
